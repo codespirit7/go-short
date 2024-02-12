@@ -122,7 +122,7 @@ func HandleShorten(w http.ResponseWriter, r *http.Request) {
 	var resp = struct {
 		URLShortId string `json:"short-url"`
 	}{
-		URLShortId: fmt.Sprintf("http://localhost:8080/short/%s", shortId),
+		URLShortId: fmt.Sprintf("https://short-go.onrender.com/short/%s", shortId),
 	}
 
 	//sending response
