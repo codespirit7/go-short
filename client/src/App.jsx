@@ -11,7 +11,7 @@ function App() {
 
   const handleUrl = async () => {
     try{
-      const response = await fetch("http://localhost:8080/short-url", {
+      const response = await fetch("https://short-go.onrender.com/short-url", {
         method: "POST",
         headers: {
           "Content-Type": "application/json"
@@ -33,7 +33,7 @@ function App() {
     setCopyStatus(true);
     setCopyState("Copied url")
     setInput("")
-    setTimeout(() => setCopyState("Copy url"), 2000); // Reset status after 2 seconds
+    setTimeout(() => setCopyState("Copy url"), 2000); 
   };
   return (
     <>
