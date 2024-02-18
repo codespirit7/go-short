@@ -149,6 +149,7 @@ func HandleRedirect(w http.ResponseWriter, r *http.Request) {
 }
 
 func HandleHealth(w http.ResponseWriter, r *http.Request) {
+	fmt.Println("health is good")
 	w.WriteHeader(http.StatusOK)
 	w.Write([]byte("Service is up and running"))
 }
