@@ -34,6 +34,7 @@ func main() {
 
 	mux.HandleFunc("/short-url", controller.HandleShorten)
 	mux.HandleFunc("/short/", controller.HandleRedirect)
+	mux.HandleFunc("/health", controller.HandleHealth)
 
 	fmt.Printf("URL Shortener is running on :%s", PORT)
 	err := http.ListenAndServe(fmt.Sprintf(":%s", PORT), handler)
