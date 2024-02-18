@@ -147,3 +147,8 @@ func HandleRedirect(w http.ResponseWriter, r *http.Request) {
 
 	http.Redirect(w, r, data.OriginalURL, http.StatusMovedPermanently)
 }
+
+func HandleHealth(w http.ResponseWriter, r *http.Request) {
+	w.WriteHeader(http.StatusOK)
+	w.Write([]byte("Service is up and running"))
+}
