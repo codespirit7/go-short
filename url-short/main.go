@@ -22,13 +22,7 @@ func main() {
 		PORT = "8080"
 	}
 
-	c := cors.New(cors.Options{
-    AllowedOrigins:   []string{"https://go-short.netlify.app"}, // better than "*"
-    AllowCredentials: true,
-    AllowedMethods:   []string{"GET", "POST", "OPTIONS"},
-    AllowedHeaders:   []string{"*"}, // allow custom headers (Content-Type, Authorization, etc.)
-    Debug: true, // turn on while debugging
-})
+c := cors.New(cors.Options{ AllowedOrigins: []string{"*"}, AllowCredentials: true, AllowedMethods: []string{"GET", "POST"}, Debug: false, })
 
 	handler := c.Handler(mux)
 
